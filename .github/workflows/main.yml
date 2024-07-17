@@ -30,8 +30,8 @@ jobs:
       - name: 📦 Install dependencies
         run: npm install --frozen-lockfile
 
-      - name: 🚧 Set up project
-        run: npm dev:prepare
+      # - name: 🚧 Set up project
+        # run: npm dev:prepare
 
       - name: 🛠 Build project
         run: npm build
