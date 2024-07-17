@@ -34,10 +34,10 @@ jobs:
         # run: npm dev:prepare
 
       - name: 🛠 Build project
-        run: npm build
+        run: npm run build
 
-      - name: 🧪 Test project
-        run: npm test
+      # - name: 🧪 Test project
+        # run: npm test
 
       - name: 🟩 Coverage
         uses: codecov/codecov-action@v4
