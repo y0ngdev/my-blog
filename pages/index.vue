@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import {Button} from "~/components/ui/button";
 import {Icon} from '@iconify/vue'
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "~/components/ui/card";
+import Avatar from "~/components/ui/avatar/Avatar.vue";
 
 const colorMode = useColorMode()
 
@@ -14,11 +16,22 @@ const toggleTheme = () => {
   }
 }
 
-
+const headline = "Design";
+const title = "UX review presentations";
+const alt = "UX review presentations";
+const image =
+    "https://images.unsplash.com/photo-1620121692029-d088224ddc74?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+const description =
+    "How do you create compelling presentations that wow your colleagues and impress your managers?";
+const date = "30 Jan 2024";
+const userImage = "https://api.dicebear.com/7.x/lorelei/svg?flip=false";
+const userName = "John Doe";
+const link = "#";
 </script>
 
+
 <template>
-  <div>
+
 
     <div class="h-dvh">
       <header
@@ -73,7 +86,7 @@ const toggleTheme = () => {
                 Technical Writer & Backend Engineer.
               </p>
               <div class=" my-6 w-20 bg-[#999999] h-0.5 rounded-md"></div>
-          
+
               <p class="mt-6 text-base dark:text-zinc-400 text-zinc-600 leading-relaxed">
                 I'm a person who has a keen interest in the design layout. I think presenting an attractive design is a
                 matter of concern in developing a branding of products. To creates a good design, I focus on proper
@@ -136,278 +149,383 @@ const toggleTheme = () => {
             </Button>
           </div>
         </section>
-        <!--      <section class="mb-16">-->
-        <!--        <h1 class="text-4xl font-bold tracking-tight mb-16">Latest Writings</h1>-->
+        <section class="mb-16">
+          <h1 class="text-4xl font-bold tracking-tight mb-16">Latest Writings</h1>
 
-        <!--        <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">-->
-        <!--          <Card class=" bg-secondary-bg">-->
-        <!--            <CardHeader>-->
+          <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
+            <Card class=" bg-secondary-bg">
+              <CardHeader>
 
-        <!--              <div class="h-56 rounded-sm overflow-clip  relative contain-size">-->
+                <div class="h-56 rounded-sm overflow-clip  relative contain-size">
 
-        <!--                <img-->
-        <!--                  alt=""-->
-        <!--                  class="h-56 w-full object-cover  hover:scale-125 hover:rotate-2 duration-300"-->
-        <!--                  src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"-->
-        <!--              />-->
-        <!--            </div>-->
-        <!--            <CardTitle class="text-2xl font-semibold tracking-tight max-w-sm">-->
-        <!--              Sanity Webhooks and On-demand Revalidation in Nextjs-->
-        <!--            </CardTitle>-->
-        <!--            <CardDescription>-->
-        <!--              <div class="flex items-center gap-x-4 text-sm">-->
-        <!--                <div class="flex items-center gap-x-2">-->
-        <!--                  <svg aria-hidden="true" fill="currentColor" height="1em" stroke="currentColor" stroke-width="0"-->
-        <!--                       viewBox="0 0 20 20" width="1em" xmlns="http://www.w3.org/2000/svg">-->
-        <!--                    <path clip-rule="evenodd"-->
-        <!--                          d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"-->
-        <!--                          fill-rule="evenodd"></path>-->
-  <!--                  </svg>-->
-  <!--                  <time datetime="2023-12-14T17:46:11.500Z">Dec 14, 2023</time>-->
-  <!--                </div>-->
-  <!--                <div class="flex items-center gap-x-2">-->
-  <!--                  <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewBox="0 0 24 24"-->
-  <!--                       width="1em" xmlns="http://www.w3.org/2000/svg">-->
-  <!--                    <path-->
-  <!--                        d="M12.25 2c-5.514 0-10 4.486-10 10s4.486 10 10 10 10-4.486 10-10-4.486-10-10-10zM18 13h-6.75V6h2v5H18v2z"></path>-->
-  <!--                  </svg>-->
-  <!--                  <div class="">5 min</div>-->
-  <!--                </div>-->
-  <!--              </div>-->
-  <!--            </CardDescription>-->
+                  <img
+                      alt=""
+                      class="h-56 w-full object-cover  hover:scale-125 hover:rotate-2 duration-300"
+                      src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                  />
+                </div>
+                <CardTitle class="text-2xl font-semibold tracking-tight max-w-sm">
+                  Sanity Webhooks and On-demand Revalidation in Nextjs
+                </CardTitle>
+                <CardDescription>
+                  <div class="flex items-center gap-x-4 text-sm">
+                    <div class="flex items-center gap-x-2">
+                      <svg aria-hidden="true" fill="currentColor" height="1em" stroke="currentColor" stroke-width="0"
+                           viewBox="0 0 20 20" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                              d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                              fill-rule="evenodd"></path>
+                      </svg>
+                      <time datetime="2023-12-14T17:46:11.500Z">Dec 14, 2023</time>
+                    </div>
+                    <div class="flex items-center gap-x-2">
+                      <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                           width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12.25 2c-5.514 0-10 4.486-10 10s4.486 10 10 10 10-4.486 10-10-4.486-10-10-10zM18 13h-6.75V6h2v5H18v2z"></path>
+                      </svg>
+                      <div class="">5 min</div>
+                    </div>
+                  </div>
+                </CardDescription>
 
-  <!--          </CardHeader>-->
-  <!--          <CardContent class="grid gap-4">-->
-  <!--            <p class="dark:text-zinc-400 text-zinc-600 text-[0.95rem]">Learn how to set up and trigger content updates-->
-  <!--              in your Sanity Headless CMS site built in Nextjs using on-demand revalidation and GROQ-powered webhooks-->
-  <!--              for delivering fast and non-cached content updates</p>-->
-
-
-  <!--          </CardContent>-->
-
-  <!--        </Card>-->
-  <!--        <Card class=" bg-secondary-bg">-->
-  <!--          <CardHeader>-->
-
-  <!--            <div class="h-56 rounded-sm overflow-clip  relative contain-size">-->
-
-  <!--              <img-->
-  <!--                  alt=""-->
-  <!--                  class="h-56 w-full object-cover  hover:scale-125 duration-300"-->
-  <!--                  src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"-->
-  <!--              />-->
-  <!--            </div>-->
-  <!--            <CardTitle class="text-2xl font-semibold tracking-tight max-w-sm">-->
-  <!--              Sanity Webhooks and On-demand Revalidation in Nextjs-->
-  <!--            </CardTitle>-->
-  <!--            <CardDescription>-->
-  <!--              <div class="flex items-center gap-x-4 text-sm">-->
-  <!--                <div class="flex items-center gap-x-2">-->
-  <!--                  <svg aria-hidden="true" fill="currentColor" height="1em" stroke="currentColor" stroke-width="0"-->
-  <!--                       viewBox="0 0 20 20" width="1em" xmlns="http://www.w3.org/2000/svg">-->
-  <!--                    <path clip-rule="evenodd"-->
-  <!--                          d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"-->
-  <!--                          fill-rule="evenodd"></path>-->
-  <!--                  </svg>-->
-  <!--                  <time datetime="2023-12-14T17:46:11.500Z">Dec 14, 2023</time>-->
-  <!--                </div>-->
-  <!--                <div class="flex items-center gap-x-2">-->
-  <!--                  <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewBox="0 0 24 24"-->
-  <!--                       width="1em" xmlns="http://www.w3.org/2000/svg">-->
-  <!--                    <path-->
-  <!--                        d="M12.25 2c-5.514 0-10 4.486-10 10s4.486 10 10 10 10-4.486 10-10-4.486-10-10-10zM18 13h-6.75V6h2v5H18v2z"></path>-->
-  <!--                  </svg>-->
-  <!--                  <div class="">5 min</div>-->
-  <!--                </div>-->
-  <!--              </div>-->
-  <!--            </CardDescription>-->
-
-  <!--          </CardHeader>-->
-  <!--          <CardContent class="grid gap-4">-->
-  <!--            <p class="dark:text-zinc-400 text-zinc-600 text-[0.95rem]">Learn how to set up and trigger content updates-->
-  <!--              in your Sanity Headless CMS site built in Nextjs using on-demand revalidation and GROQ-powered webhooks-->
-  <!--              for delivering fast and non-cached content updates</p>-->
+              </CardHeader>
+              <CardContent class="grid gap-4">
+                <p class="dark:text-zinc-400 text-zinc-600 text-[0.95rem]">Learn how to set up and trigger content
+                  updates
+                  in your Sanity Headless CMS site built in Nextjs using on-demand revalidation and GROQ-powered
+                  webhooks
+                  for delivering fast and non-cached content updates</p>
 
 
-  <!--          </CardContent>-->
+              </CardContent>
 
-  <!--        </Card>-->
-  <!--        <Card class=" bg-secondary-bg">-->
-  <!--          <CardHeader>-->
+            </Card>
+            <Card class=" bg-secondary-bg">
+              <CardHeader>
 
-  <!--            <div class="h-56 rounded-sm overflow-clip  relative contain-size">-->
+                <div class="h-56 rounded-sm overflow-clip  relative contain-size">
 
-  <!--              <img-->
-  <!--                  alt=""-->
-  <!--                  class="h-56 w-full object-cover  hover:scale-125 duration-300"-->
-  <!--                  src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"-->
-  <!--              />-->
-  <!--            </div>-->
-  <!--            <CardTitle class="text-2xl font-semibold tracking-tight max-w-sm">-->
-  <!--              Sanity Webhooks and On-demand Revalidation in Nextjs-->
-  <!--            </CardTitle>-->
-  <!--            <CardDescription>-->
-  <!--              <div class="flex items-center gap-x-4 text-sm">-->
-  <!--                <div class="flex items-center gap-x-2">-->
-  <!--                  <svg aria-hidden="true" fill="currentColor" height="1em" stroke="currentColor" stroke-width="0"-->
-  <!--                       viewBox="0 0 20 20" width="1em" xmlns="http://www.w3.org/2000/svg">-->
-  <!--                    <path clip-rule="evenodd"-->
-  <!--                          d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"-->
-  <!--                          fill-rule="evenodd"></path>-->
-  <!--                  </svg>-->
-  <!--                  <time datetime="2023-12-14T17:46:11.500Z">Dec 14, 2023</time>-->
-  <!--                </div>-->
-  <!--                <div class="flex items-center gap-x-2">-->
-  <!--                  <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewBox="0 0 24 24"-->
-  <!--                       width="1em" xmlns="http://www.w3.org/2000/svg">-->
-  <!--                    <path-->
-  <!--                        d="M12.25 2c-5.514 0-10 4.486-10 10s4.486 10 10 10 10-4.486 10-10-4.486-10-10-10zM18 13h-6.75V6h2v5H18v2z"></path>-->
-  <!--                  </svg>-->
-  <!--                  <div class="">5 min</div>-->
-  <!--                </div>-->
-  <!--              </div>-->
-  <!--            </CardDescription>-->
+                  <img
+                      alt=""
+                      class="h-56 w-full object-cover  hover:scale-125 duration-300"
+                      src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                  />
+                </div>
+                <CardTitle class="text-2xl font-semibold tracking-tight max-w-sm">
+                  Sanity Webhooks and On-demand Revalidation in Nextjs
+                </CardTitle>
+                <CardDescription>
+                  <div class="flex items-center gap-x-4 text-sm">
+                    <div class="flex items-center gap-x-2">
+                      <svg aria-hidden="true" fill="currentColor" height="1em" stroke="currentColor" stroke-width="0"
+                           viewBox="0 0 20 20" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                              d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                              fill-rule="evenodd"></path>
+                      </svg>
+                      <time datetime="2023-12-14T17:46:11.500Z">Dec 14, 2023</time>
+                    </div>
+                    <div class="flex items-center gap-x-2">
+                      <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                           width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12.25 2c-5.514 0-10 4.486-10 10s4.486 10 10 10 10-4.486 10-10-4.486-10-10-10zM18 13h-6.75V6h2v5H18v2z"></path>
+                      </svg>
+                      <div class="">5 min</div>
+                    </div>
+                  </div>
+                </CardDescription>
 
-  <!--          </CardHeader>-->
-  <!--          <CardContent class="grid gap-4">-->
-  <!--            <p class="dark:text-zinc-400 text-zinc-600 text-[0.95rem]">Learn how to set up and trigger content updates-->
-  <!--              in your Sanity Headless CMS site built in Nextjs using on-demand revalidation and GROQ-powered webhooks-->
-  <!--              for delivering fast and non-cached content updates</p>-->
-
-
-  <!--          </CardContent>-->
-
-  <!--        </Card>-->
-
-  <!--      </div>-->
-  <!--      <div class="flex justify-center">-->
-
-  <!--        <Button class="mt-16 bg-secondary-bg h-12" variant="outline">-->
-  <!--          <NuxtLink to="/blog">-->
-
-  <!--            <p class="flex items-center">View all Posts  </p>-->
-  <!--          </NuxtLink>-->
-  <!--        </Button>-->
-  <!--      </div>-->
-
-  <!--    </section>-->
-  <!--    <section class="mb-16">-->
-  <!--      <h1 class="text-4xl font-bold tracking-tight">-->
-  <!--        Tools and Skills-->
-  <!--      </h1>-->
-
-  <!--    </section>-->
-  <!--    <section class="mb-16">-->
-  <!--      <h1 class="text-4xl font-bold tracking-tight">-->
-  <!--        Newest Project-->
-  <!--      </h1>-->
-
-  <!--      <section>-->
-  <!--        <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">-->
-  <!--          <header>-->
-  <!--            <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Product Collection</h2>-->
-
-  <!--            <p class="mt-4 max-w-md text-gray-500">-->
-  <!--              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque praesentium cumque iure-->
-  <!--              dicta incidunt est ipsam, officia dolor fugit natus?-->
-  <!--            </p>-->
-  <!--          </header>-->
-
-  <!--          <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">-->
-  <!--            <li>-->
-  <!--              <a href="#" class="group block overflow-hidden">-->
-  <!--                <img-->
-  <!--                    src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"-->
-  <!--                    alt=""-->
-  <!--                    class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"-->
-  <!--                />-->
-
-  <!--                <div class="relative bg-white pt-3">-->
-  <!--                  <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">-->
-  <!--                    Basic Tee-->
-  <!--                  </h3>-->
-
-  <!--                  <p class="mt-2">-->
-  <!--                    <span class="sr-only"> Regular Price </span>-->
-
-  <!--                    <span class="tracking-wider text-gray-900"> £24.00 GBP </span>-->
-  <!--                  </p>-->
-  <!--                </div>-->
-  <!--              </a>-->
-  <!--            </li>-->
-
-  <!--            <li>-->
-  <!--              <a href="#" class="group block overflow-hidden">-->
-  <!--                <img-->
-  <!--                    src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"-->
-  <!--                    alt=""-->
-  <!--                    class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"-->
-  <!--                />-->
-
-  <!--                <div class="relative bg-white pt-3">-->
-  <!--                  <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">-->
-  <!--                    Basic Tee-->
-  <!--                  </h3>-->
-
-  <!--                  <p class="mt-2">-->
-  <!--                    <span class="sr-only"> Regular Price </span>-->
-
-  <!--                    <span class="tracking-wider text-gray-900"> £24.00 GBP </span>-->
-  <!--                  </p>-->
-  <!--                </div>-->
-  <!--              </a>-->
-  <!--            </li>-->
-
-  <!--            <li>-->
-  <!--              <a href="#" class="group block overflow-hidden">-->
-  <!--                <img-->
-  <!--                    src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"-->
-  <!--                    alt=""-->
-  <!--                    class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"-->
-  <!--                />-->
-
-  <!--                <div class="relative bg-white pt-3">-->
-  <!--                  <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">-->
-  <!--                    Basic Tee-->
-  <!--                  </h3>-->
-
-  <!--                  <p class="mt-2">-->
-  <!--                    <span class="sr-only"> Regular Price </span>-->
-
-  <!--                    <span class="tracking-wider text-gray-900"> £24.00 GBP </span>-->
-  <!--                  </p>-->
-  <!--                </div>-->
-  <!--              </a>-->
-  <!--            </li>-->
-
-  <!--            <li>-->
-  <!--              <a href="#" class="group block overflow-hidden">-->
-  <!--                <img-->
-  <!--                    src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"-->
-  <!--                    alt=""-->
-  <!--                    class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"-->
-        <!--                />-->
-
-        <!--                <div class="relative bg-white pt-3">-->
-        <!--                  <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">-->
-        <!--                    Basic Tee-->
-        <!--                  </h3>-->
-
-        <!--                  <p class="mt-2">-->
-        <!--                    <span class="sr-only"> Regular Price </span>-->
-
-        <!--                    <span class="tracking-wider text-gray-900"> £24.00 GBP </span>-->
-        <!--                  </p>-->
-        <!--                </div>-->
-        <!--              </a>-->
-        <!--            </li>-->
-        <!--          </ul>-->
-        <!--        </div>-->
-        <!--      </section>-->
-        <!--    </section>-->
+              </CardHeader>
+              <CardContent class="grid gap-4">
+                <p class="dark:text-zinc-400 text-zinc-600 text-[0.95rem]">Learn how to set up and trigger content
+                  updates
+                  in your Sanity Headless CMS site built in Nextjs using on-demand revalidation and GROQ-powered
+                  webhooks
+                  for delivering fast and non-cached content updates</p>
+                <!---->
+                <!---->
+              </CardContent>
+              <!---->
+            </Card>
+            <Card class=" bg-secondary-bg">
+              <CardHeader>
+                <!---->
+                <div class="h-56 rounded-sm overflow-clip  relative contain-size">
+                  <!---->
+                  <img
+                      alt=""
+                      class="h-56 w-full object-cover  hover:scale-125 duration-300"
+                      src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                  />
+                </div>
+                <CardTitle class="text-2xl font-semibold tracking-tight max-w-sm">
+                  Sanity Webhooks and On-demand Revalidation in Nextjs
+                </CardTitle>
+                <CardDescription>
+                  <div class="flex items-center gap-x-4 text-sm">
+                    <div class="flex items-center gap-x-2">
+                      <svg aria-hidden="true" fill="currentColor" height="1em" stroke="currentColor" stroke-width="0"
+                           viewBox="0 0 20 20" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                              d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                              fill-rule="evenodd"></path>
+                      </svg>
+                      <time datetime="2023-12-14T17:46:11.500Z">Dec 14, 2023</time>
+                    </div>
+                    <div class="flex items-center gap-x-2">
+                      <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                           width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12.25 2c-5.514 0-10 4.486-10 10s4.486 10 10 10 10-4.486 10-10-4.486-10-10-10zM18 13h-6.75V6h2v5H18v2z"></path>
+                      </svg>
+                      <div class="">5 min</div>
+                    </div>
+                  </div>
+                </CardDescription>
+                <!---->
+              </CardHeader>
+              <CardContent class="grid gap-4">
+                <p class="dark:text-zinc-400 text-zinc-600 text-[0.95rem]">Learn how to set up and trigger content
+                  updates
+                  in your Sanity Headless CMS site built in Nextjs using on-demand revalidation and GROQ-powered
+                  webhooks
+                  for delivering fast and non-cached content updates</p>
+                <!---->
+                <!---->
+              </CardContent>
+              <!---->
+            </Card>
+            <!---->
+          </div>
+          <div class="flex justify-center">
+            <!---->
+            <Button class="mt-16 bg-secondary-bg h-12" variant="outline">
+              <NuxtLink to="/blog">
+                <!---->
+                <p class="flex items-center">View all Posts </p>
+              </NuxtLink>
+            </Button>
+          </div>
+          <!---->
+          <!--        </section>-->
+          <section class="mb-16">
+            <h1 class="text-4xl font-bold tracking-tight">
+              Tools and Skills
+            </h1>
+            <!---->
+          </section>
+          <section class="mb-16">
+            <h1 class="text-4xl font-bold tracking-tight">
+              Newest Project
+            </h1>
+            <!---->
+            <section>
+              <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+                <header>
+                  <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Product Collection</h2>
+                  <!---->
+                  <p class="mt-4 max-w-md text-gray-500">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque praesentium cumque iure
+                    dicta incidunt est ipsam, officia dolor fugit natus?
+                  </p>
+                </header>
+                <!---->
+                <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                  <li>
+                    <a class="group block overflow-hidden" href="#">
+                      <img
+                          alt=""
+                          class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
+                          src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                      />
+                      <!---->
+                      <div class="relative bg-white pt-3">
+                        <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">
+                          Basic Tee
+                        </h3>
+                        <!---->
+                        <p class="mt-2">
+                          <span class="sr-only"> Regular Price </span>
+                          <!---->
+                          <span class="tracking-wider text-gray-900"> £24.00 GBP </span>
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <!---->
+                  <li>
+                    <a class="group block overflow-hidden" href="#">
+                      <img
+                          alt=""
+                          class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
+                          src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                      />
+                      <!---->
+                      <div class="relative bg-white pt-3">
+                        <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">
+                          Basic Tee
+                        </h3>
+                        <!---->
+                        <p class="mt-2">
+                          <span class="sr-only"> Regular Price </span>
+                          <!---->
+                          <span class="tracking-wider text-gray-900"> £24.00 GBP </span>
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <!---->
+                  <li>
+                    <a class="group block overflow-hidden" href="#">
+                      <img
+                          alt=""
+                          class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
+                          src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                      />
+                      <!---->
+                      <div class="relative bg-white pt-3">
+                        <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">
+                          Basic Tee
+                        </h3>
+                        <!---->
+                        <p class="mt-2">
+                          <span class="sr-only"> Regular Price </span>
+                          <!---->
+                          <span class="tracking-wider text-gray-900"> £24.00 GBP </span>
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <!---->
+                  <li>
+                    <a class="group block overflow-hidden" href="#">
+                      <img
+                          alt=""
+                          class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
+                          src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                      />
+                      <!---->
+                      <div class="relative bg-white pt-3">
+                        <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">
+                          Basic Tee
+                        </h3>
+                        <!---->
+                        <p class="mt-2">
+                          <span class="sr-only"> Regular Price </span>
+                          <!---->
+                          <span class="tracking-wider text-gray-900"> £24.00 GBP </span>
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </section>
+        </section>
       </div>
-    </div>
-  </div>
-</template>
+      <div class=" py-16 lg:py-24">
+        <div class="flex flex-col md:flex-row md:justify-between">
+          <div>
+            <h3 class="mb-5 text-3xl font-semibold lg:text-4xl">Latest from my blog</h3>
+            <p class="text-lg text-muted-foreground lg:text-xl">
+              Tool and strategies modern teams need to help their companies grow.
+            </p>
+          </div>
+          <Button class="hidden shrink-0 whitespace-nowrap md:flex">View all posts</Button>
+        </div>
 
+        <div class="mt-12 grid grid-cols-1 gap-10 lg:mt-16 lg:grid-cols-3">
+          <div v-for="item in 3" :key="item">
+            <NuxtLink :to="link">
+<!--              <div class=" overflow-clip   contain-size">-->
+                <NuxtImg
+                    v-if="image"
+                    :alt="alt"
+                    :src="image"
+                    class="w-full h-[240px] object-cover shadow hover:scale-125 hover:rotate-2 duration-300"
+                />
+<!--              </div>-->
+            </NuxtLink>
+            <p v-if="headline" class="mb-2 text-sm font-semibold text-primary">{{ headline }}</p>
+            <NuxtLink :to="link">
+              <p class="mb-2 text-xl font-semibold lg:text-2xl">{{ title }}</p>
+            </NuxtLink>
+            <p v-if="description" class="mb-5 line-clamp-2 text-ellipsis text-muted-foreground">
+              {{ description }}
+            </p>
+            <div class="flex items-center">
+              <Avatar
+                  v-if="userImage"
+                  :alt="userName"
+                  :src="userImage"
+                  class="mr-3 rounded-full bg-background shadow ring-1 ring-ring/30"
+              />
+              <div>
+                <p v-if="userName" class="text-sm font-semibold">{{ userName }}</p>
+                <p v-if="date" class="text-sm text-muted-foreground">{{ date }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Button class="mt-10 w-full shrink-0 whitespace-nowrap md:hidden">View all posts</Button>
+      </div>
+
+
+
+
+        <div class="container mx-auto py-16 lg:py-24">
+          <div class="flex flex-col md:flex-row md:justify-between">
+            <div>
+              <p class="mb-3 font-semibold text-primary">Our blog</p>
+              <h3 class="mb-5 text-3xl font-semibold lg:text-4xl">Our latest blog posts</h3>
+              <p class="text-lg text-muted-foreground lg:text-xl">
+                Tool and strategies modern teams need to help their companies grow.
+              </p>
+            </div>
+            <Button class="hidden shrink-0 whitespace-nowrap md:flex">View all posts</Button>
+          </div>
+
+          <div class="mt-12 grid grid-cols-1 gap-10 lg:mt-16 lg:grid-cols-3">
+            <div v-for="item in 3" :key="item">
+              <NuxtLink :to="link">
+                <img
+                    v-if="image"
+                    :src="image"
+                    :alt="alt"
+                    class="mb-5 h-[240px] w-full rounded-lg object-cover shadow"
+                />
+              </NuxtLink>
+              <p v-if="headline" class="mb-2 text-sm font-semibold text-primary">{{ headline }}</p>
+              <NuxtLink :to="link">
+                <p class="mb-2 text-xl font-semibold lg:text-2xl">{{ title }}</p>
+              </NuxtLink>
+              <p v-if="description" class="mb-5 line-clamp-2 text-ellipsis text-muted-foreground">
+                {{ description }}
+              </p>
+              <div class="flex items-center">
+                <Avatar
+                    v-if="userImage"
+                    :src="userImage"
+                    :alt="userName"
+                    class="mr-3 rounded-full bg-background shadow ring-1 ring-ring/30"
+                />
+                <div>
+                  <p v-if="userName" class="text-sm font-semibold">{{ userName }}</p>
+                  <p v-if="date" class="text-sm text-muted-foreground">{{ date }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <Button class="mt-10 w-full shrink-0 whitespace-nowrap md:hidden">View all posts</Button>
+        </div>
+
+
+    </div>
+
+
+</template>
+<!---->
 <style scoped></style>
