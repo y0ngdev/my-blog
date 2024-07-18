@@ -426,55 +426,6 @@ const link = "#";
           </section>
         </section>
       </div>
-      <div class=" py-16 lg:py-24">
-        <div class="flex flex-col md:flex-row md:justify-between">
-          <div>
-            <h3 class="mb-5 text-3xl font-semibold lg:text-4xl">Latest from my blog</h3>
-            <p class="text-lg text-muted-foreground lg:text-xl">
-              Tool and strategies modern teams need to help their companies grow.
-            </p>
-          </div>
-          <Button class="hidden shrink-0 whitespace-nowrap md:flex">View all posts</Button>
-        </div>
-
-        <div class="mt-12 grid grid-cols-1 gap-10 lg:mt-16 lg:grid-cols-3">
-          <div v-for="item in 3" :key="item">
-            <NuxtLink :to="link">
-<!--              <div class=" overflow-clip   contain-size">-->
-                <NuxtImg
-                    v-if="image"
-                    :alt="alt"
-                    :src="image"
-                    class="w-full h-[240px] object-cover shadow hover:scale-125 hover:rotate-2 duration-300"
-                />
-<!--              </div>-->
-            </NuxtLink>
-            <p v-if="headline" class="mb-2 text-sm font-semibold text-primary">{{ headline }}</p>
-            <NuxtLink :to="link">
-              <p class="mb-2 text-xl font-semibold lg:text-2xl">{{ title }}</p>
-            </NuxtLink>
-            <p v-if="description" class="mb-5 line-clamp-2 text-ellipsis text-muted-foreground">
-              {{ description }}
-            </p>
-            <div class="flex items-center">
-              <Avatar
-                  v-if="userImage"
-                  :alt="userName"
-                  :src="userImage"
-                  class="mr-3 rounded-full bg-background shadow ring-1 ring-ring/30"
-              />
-              <div>
-                <p v-if="userName" class="text-sm font-semibold">{{ userName }}</p>
-                <p v-if="date" class="text-sm text-muted-foreground">{{ date }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <Button class="mt-10 w-full shrink-0 whitespace-nowrap md:hidden">View all posts</Button>
-      </div>
-
-
-
 
         <div class="container mx-auto py-16 lg:py-24">
           <div class="flex flex-col md:flex-row md:justify-between">
@@ -489,14 +440,19 @@ const link = "#";
           </div>
 
           <div class="mt-12 grid grid-cols-1 gap-10 lg:mt-16 lg:grid-cols-3">
-            <div v-for="item in 3" :key="item">
+            <div v-for="item in 3" class="group" :key="item">
               <NuxtLink :to="link">
-                <img
-                    v-if="image"
-                    :src="image"
-                    :alt="alt"
-                    class="mb-5 h-[240px] w-full rounded-lg object-cover shadow"
-                />
+                <div class="relative mb-5 overflow-clip">
+<!--                  h-[240px] mb-5 relative  w-full overflow-clip-->
+                  <img
+                      v-if="image"
+                      :alt="alt"
+                      :src="image"
+                      class="object-fill h-[240px] w-full group-hover:scale-125 duration-300"
+                  />
+
+<!--                  object-cover shadow group-hover:scale-125 group-hover:rotate-2 duration-300-->
+                </div>
               </NuxtLink>
               <p v-if="headline" class="mb-2 text-sm font-semibold text-primary">{{ headline }}</p>
               <NuxtLink :to="link">
