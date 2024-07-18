@@ -74,7 +74,7 @@
   body {
     @apply bg-background text-foreground;
 
-    background-image: url("../../public/noise.png");
+    background-image: url("../../public/assets/img/noise.png");
     background-size: 200px 200px;
     background-position: 0 0;
     font-family: "Inter", sans-serif;
